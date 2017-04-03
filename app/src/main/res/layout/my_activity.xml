@@ -150,7 +150,8 @@
         android:layout_marginTop="10dp"
         android:textColor="@android:color/black"
         android:fontFamily="casual"
-        android:typeface="monospace"/>
+        android:typeface="monospace"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
 
 
 
