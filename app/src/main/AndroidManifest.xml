@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>-->
 
-        <activity android:name=".BottomNvgViewPageAct">
+        <activity android:name=".BottomNvgViewPageAct"
+                  android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

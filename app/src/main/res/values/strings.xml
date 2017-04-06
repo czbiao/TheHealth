@@ -7,7 +7,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="community">社区</string>
     <string name="nutrition">营养</string>
-    <string name="consult">咨询</string>
+    <string name="talk">咨询</string>
     <string name="mould">塑形</string>
     <string name="user">我</string>
 </resources>

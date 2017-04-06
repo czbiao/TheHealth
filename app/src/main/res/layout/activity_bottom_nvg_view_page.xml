@@ -3,51 +3,50 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorAccent">
 
-
-
-
     <RadioGroup
         android:id="@+id/rg_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:layout_height="45dp">
 
         <RadioButton
             android:id="@+id/rb_commun"
             style="@style/menu_item"
             android:drawableTop="@drawable/menu_community"
             android:text="@string/community"
-            android:layout_height="45dp"/>
+            android:textColor="@drawable/menu_text_color"/>
 
         <RadioButton
             android:id="@+id/rb_nutri"
             style="@style/menu_item"
             android:drawableTop="@drawable/menu_nutrition"
             android:text="@string/nutrition"
-            android:layout_height="45dp"/>
+            android:textColor="@drawable/menu_text_color"/>
 
         <RadioButton
             android:id="@+id/rb_consult"
             style="@style/menu_item"
             android:drawableTop="@drawable/menu_consult"
-            android:text="@string/consult"
-            android:layout_height="45dp"/>
+            android:text="@string/talk"
+            android:textColor="@drawable/menu_text_color"/>
 
         <RadioButton
             android:id="@+id/rb_mould"
             style="@style/menu_item"
             android:drawableTop="@drawable/menu_mould"
             android:text="@string/mould"
-            android:layout_height="45dp"/>
+            android:textColor="@drawable/menu_text_color"/>
 
         <RadioButton
             android:id="@+id/rb_user"
             style="@style/menu_item"
             android:drawableTop="@drawable/menu_user"
             android:text="@string/user"
-            android:layout_height="45dp"/>
+            android:textColor="@drawable/menu_text_color"/>
 
     </RadioGroup>
 

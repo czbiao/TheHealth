@@ -9,7 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * 为了顺便演示ViewPager的机制，
@@ -24,12 +25,17 @@ public class UserFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.my_activity, container, false);
-        TextView txt_content = (TextView) view.findViewById(R.id.login);
-        txt_content.setText("第4个Fragment");
+        Button loginbtn = (Button)view.findViewById(R.id.login);
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(container.getContext(),"没有登录",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         return view;

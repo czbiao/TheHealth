@@ -80,82 +80,29 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_activity_btn"
         android:drawableLeft="@drawable/wallet"
-        android:text="钱包"
-        android:drawablePadding="20dp"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:background="@drawable/shape"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
-        android:fontFamily="sans-serif-medium"
-        />
+        android:text="钱包"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_activity_btn"
         android:drawableLeft="@drawable/user"
         android:text="账户管理"
-        android:drawablePadding="20dp"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:background="@drawable/shape"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
         />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_activity_btn"
         android:drawableLeft="@drawable/user_add"
-        android:text="邀请好友"
-        android:drawablePadding="20dp"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:background="@drawable/shape"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
-        android:fontFamily="serif-monospace"/>
+        android:text="邀请好友"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_activity_btn"
         android:drawableLeft="@drawable/calendar"
-        android:text="大姨妈"
-        android:drawablePadding="20dp"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:background="@drawable/shape"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
-        android:fontFamily="cursive"
-        android:typeface="sans"/>
+        android:text="大姨妈"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_activity_btn"
         android:drawableLeft="@drawable/headset"
-        android:text="联系客服"
-        android:background="@drawable/shape"
-        android:drawablePadding="20dp"
-        android:textAlignment="viewStart"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@android:color/black"
-        android:fontFamily="casual"
-        android:typeface="monospace"
-        style="@style/Widget.AppCompat.Button.Borderless"/>
-
-
-
-
-    <!--<include layout="@layout/bottom_btn"></include>-->
+        android:text="联系客服"/>
 
 </LinearLayout>
