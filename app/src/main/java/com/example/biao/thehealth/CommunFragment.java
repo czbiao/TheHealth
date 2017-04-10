@@ -27,9 +27,7 @@ public class CommunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.activity_main, container, false);
-        TextView txt_content = (TextView) view.findViewById(R.id.txt_topbar);
-        txt_content.setText("第一个Fragment");
+        View view = inflater.inflate(R.layout.commun_activity, container, false);
 
         return view;
     }

@@ -164,24 +164,5 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    <!--<android.support.design.widget.TabLayout
-        android:id="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/search_bg"
-        >
 
-    </android.support.design.widget.TabLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/health_pager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" >
-        <TextView
-            android:id="@+id/pager_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ceshi"/>
-    </android.support.v4.view.ViewPager>-->
 </LinearLayout>
