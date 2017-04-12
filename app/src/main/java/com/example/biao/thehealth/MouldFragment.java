@@ -4,6 +4,7 @@ package com.example.biao.thehealth;
  * Created by Biao on 2017/3/31.
  */
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -40,11 +41,11 @@ public class MouldFragment extends Fragment {
 //		mImageCycleView.setAutoCycle(false); //关闭自动播放
 //		mImageCycleView.setCycleDelayed(2000);//设置自动轮播循环时间
 //
-//		mImageCycleView.setIndicationStyle(ImageCycleView.IndicationStyle.COLOR,
+//        mMouldImageCycleView.setIndicationStyle(Mould_ImageCycleView.IndicationStyle.COLOR,
 //				Color.BLUE, Color.RED, 1f);
 
-        mMouldImageCycleView.setIndicationStyle(Mould_ImageCycleView.IndicationStyle.IMAGE,
-                R.drawable.dian_unfocus, R.drawable.dian_focus, 1f);
+//        mMouldImageCycleView.setIndicationStyle(Mould_ImageCycleView.IndicationStyle.IMAGE,
+//              R.drawable.dian_unfocus, R.drawable.dian_focus, 1f);
 
 //		Log.e("eee", Environment.getExternalStorageDirectory().getPath()+ File.separator+"a1.jpg");
 
@@ -55,7 +56,6 @@ public class MouldFragment extends Fragment {
         list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"222222222222",""));
         list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa3,"333333333333",""));
         list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"333333333333",""));
-        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa1,"333333333333",""));
 
         //SD卡图片资源
 //		list.add(new ImageCycleView.ImageInfo(new File(Environment.getExternalStorageDirectory(),"a1.jpg"),"11111",""));
