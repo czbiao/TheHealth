@@ -73,6 +73,11 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
 
         mRadioGroup = (RadioGroup)view.findViewById(R.id.health_rg_btn);
         mRadioGroup.setOnCheckedChangeListener(this);
+        FragmentManager fm=getChildFragmentManager();
+        FragmentTransaction ft=fm.beginTransaction();
+        BlankFragment mFragment = new BlankFragment();
+        ft.replace(R.id.frag,mFragment).commit();
+
 
         return view;
     }
