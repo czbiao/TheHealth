@@ -23,4 +23,13 @@
 
     </LinearLayout>
 
+
+    <com.example.biao.thehealth.Mould.Mould_ImageCycleView
+        android:id="@+id/mould_View"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+    </com.example.biao.thehealth.Mould.Mould_ImageCycleView>
+
 </LinearLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+    <FrameLayout
+        android:layout_marginTop="35dp"
+        android:id="@+id/mould_fl_image_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp">
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="塑形运动推荐"
+        android:textSize="15sp"
+        android:gravity="center_vertical|center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/mould_ll_indication_group"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mould_tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="15sp"
+        android:layout_weight="1"/>
+
+
+
+
+</RelativeLayout>
