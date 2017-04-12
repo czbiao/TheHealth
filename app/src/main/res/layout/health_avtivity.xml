@@ -115,7 +115,8 @@
             android:text="热门视频"
             android:layout_weight="1"
             android:textStyle="normal"
-            android:textColor="@drawable/menu_text_color"/>
+            android:textColor="@drawable/menu_text_color"
+            android:checked="true"/>
         <RadioButton
             android:id="@+id/health_btn2"
             android:layout_width="wrap_content"

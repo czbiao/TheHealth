@@ -71,8 +71,8 @@ public class TalkFragment extends Fragment {
 //		mImageCycleView.setIndicationStyle(ImageCycleView.IndicationStyle.COLOR,
 //				Color.BLUE, Color.RED, 1f);
 
-//		mImageCycleView.setIndicationStyle(ImageCycleView.IndicationStyle.IMAGE,
-//				R.drawable.dian_unfocus, R.drawable.dian_focus, 1f);
+		mImageCycleView.setIndicationStyle(ImageCycleView.IndicationStyle.IMAGE,
+				R.drawable.dian_unfocus, R.drawable.dian_focus, 1f);
 
 //		Log.e("eee", Environment.getExternalStorageDirectory().getPath()+ File.separator+"a1.jpg");
 
