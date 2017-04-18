@@ -62,6 +62,7 @@ public class BottomNvgViewPageAct extends AppCompatActivity implements RadioGrou
         vpager = (ViewPager) findViewById(R.id.vpager);
         vpager.setAdapter(mAdapter);
         vpager.setCurrentItem(0);
+        vpager.setOffscreenPageLimit(5);
         vpager.addOnPageChangeListener(this);
     }
 
