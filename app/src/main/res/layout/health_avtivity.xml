@@ -6,7 +6,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <SearchView
+    <!--<SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,14 +18,20 @@
         android:layout_weight="0.001"
         android:paddingBottom="-8dp"
         android:paddingTop="-8dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"/>-->
+
+    <com.quinny898.library.persistentsearch.SearchBox
+        android:layout_width="wrap_content"
+        android:id="@+id/searchbox"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/search_bg"
+        android:background="@drawable/radio_bg"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,53 +109,57 @@
         android:id="@+id/health_rg_btn"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:background="@drawable/search_bg"
-        android:orientation="horizontal"
         android:layout_marginBottom="5dp"
-        android:gravity="center_vertical">
+        android:background="@drawable/radio_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/health_btn1"
+            style="@style/menu_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/menu_item"
-            android:text="热门视频"
             android:layout_weight="1"
-            android:textStyle="normal"
+            android:checked="true"
+            android:text="热门视频"
             android:textColor="@drawable/menu_text_color"
-            android:checked="true"/>
+            android:textStyle="normal"/>
+
         <RadioButton
             android:id="@+id/health_btn2"
+            style="@style/menu_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/menu_item"
-            android:text="热门文章"
             android:layout_weight="1"
-            android:textStyle="normal"
-            android:textColor="@drawable/menu_text_color"/>
+            android:text="热门文章"
+            android:textColor="@drawable/menu_text_color"
+            android:textStyle="normal"/>
+
         <RadioButton
             android:id="@+id/health_btn3"
+            style="@style/menu_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/menu_item"
-            android:text="推荐视频"
             android:layout_weight="1"
-            android:textStyle="normal"
-            android:textColor="@drawable/menu_text_color"/>
+            android:text="推荐视频"
+            android:textColor="@drawable/menu_text_color"
+            android:textStyle="normal"/>
+
         <RadioButton
             android:id="@+id/health_btn4"
+            style="@style/menu_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/menu_item"
-            android:text="推荐文章"
             android:layout_weight="1"
-            android:textStyle="normal"
-            android:textColor="@drawable/menu_text_color"/>
+            android:text="推荐文章"
+            android:textColor="@drawable/menu_text_color"
+            android:textStyle="normal"/>
     </RadioGroup>
 
 
-        <ScrollView
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="171dp">
+            android:layout_height="match_parent">
             <FrameLayout
                 android:id="@+id/frag"
                 android:layout_width="match_parent"
@@ -160,10 +170,10 @@
 
         </ScrollView>
 
-    <ListView
+    <!--<ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1" />-->
 
 </LinearLayout>

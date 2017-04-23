@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "25.0.2"
@@ -66,4 +73,5 @@ dependencies {
     }
     compile 'pub.devrel:easypermissions:0.2.1'
     compile files('libs/android-support-multidex.jar')
+	compile 'com.quinny898.library.persistentsearch:library:1.0.0-SNAPSHOT'
 }

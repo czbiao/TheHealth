@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.biao.thehealth.commun.CommunFragment;
+import com.example.biao.thehealth.health_frag.HealthFragment;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
