@@ -1,11 +1,10 @@
-package com.example.biao.thehealth.Mould;
+package com.example.biao.thehealth.mould;
 
 /**
  * Created by Biao on 2017/3/31.
  */
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.Fragment;
@@ -15,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.biao.thehealth.Mould.Mould_ImageCycleView;
 import com.example.biao.thehealth.R;
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.quinny898.library.persistentsearch.SearchResult;

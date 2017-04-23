@@ -1,4 +1,4 @@
-package com.example.biao.thehealth;
+package com.example.biao.thehealth.talk;
 
 /**
  * Created by Biao on 2017/3/31.
@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.biao.thehealth.R;
 import com.example.biao.thehealth.talk.ImageCycleView;
 
 import java.io.InputStream;

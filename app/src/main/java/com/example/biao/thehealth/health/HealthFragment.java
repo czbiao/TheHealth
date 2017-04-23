@@ -1,38 +1,26 @@
-package com.example.biao.thehealth.health_frag;
+package com.example.biao.thehealth.health;
 
 /**
  * Created by Biao on 2017/3/31.
  */
 
-import android.app.ActionBar;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.SearchView.OnCloseListener;
 
 import com.example.biao.thehealth.R;
-import com.example.biao.thehealth.TalkFragment;
-import com.example.biao.thehealth.UserFragment;
-import com.example.biao.thehealth.health_frag.BlankFragment;
+import com.example.biao.thehealth.talk.TalkFragment;
+import com.example.biao.thehealth.user.UserFragment;
 
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.quinny898.library.persistentsearch.SearchBox.MenuListener;

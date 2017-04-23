@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.Mould;
+package com.example.biao.thehealth.mould;
 
 /**
  * Created by Biao on 2017/4/10.

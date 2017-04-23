@@ -1,4 +1,4 @@
-package com.example.biao.thehealth;
+package com.example.biao.thehealth.user;
 
 /**
  * Created by Biao on 2017/3/31.
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.biao.thehealth.R;
 
 /**
  * 为了顺便演示ViewPager的机制，
