@@ -1,21 +1,29 @@
-package com.example.biao.thehealth;
+package com.example.biao.thehealth.Mould;
 
 /**
  * Created by Biao on 2017/3/31.
  */
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.biao.thehealth.Mould.Mould_ImageCycleView;
+import com.example.biao.thehealth.R;
+import com.quinny898.library.persistentsearch.SearchBox;
+import com.quinny898.library.persistentsearch.SearchResult;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * 为了顺便演示ViewPager的机制，
@@ -23,7 +31,8 @@ import java.util.List;
  */
 public class MouldFragment extends Fragment {
     private Mould_ImageCycleView mMouldImageCycleView;
-
+    Boolean isSearch;
+    private SearchBox search;
 
     public MouldFragment() {
         // Required empty public constructor
@@ -52,10 +61,10 @@ public class MouldFragment extends Fragment {
         List<Mould_ImageCycleView.ImageInfo> list=new ArrayList<Mould_ImageCycleView.ImageInfo>();
 
         //res图片资源
-        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa1,"111111111111",""));
-        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"222222222222",""));
-        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa3,"333333333333",""));
-        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"333333333333",""));
+        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa1,"111111111111","第一张"));
+        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"222222222222","第二张"));
+        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa3,"333333333333","第三张"));
+        list.add(new Mould_ImageCycleView.ImageInfo(R.drawable.aa2,"333333333333","第四张"));
 
         //SD卡图片资源
 //		list.add(new ImageCycleView.ImageInfo(new File(Environment.getExternalStorageDirectory(),"a1.jpg"),"11111",""));
@@ -68,12 +77,12 @@ public class MouldFragment extends Fragment {
 //		list.add(new ImageCycleView.ImageInfo("http://img.lakalaec.com/ad/cb56a1a6-6c33-41e4-9c3c-363f4ec6b728.jpg","222","rrrr"));
 //		list.add(new ImageCycleView.ImageInfo("http://img.lakalaec.com/ad/e4229e25-3906-4049-9fe8-e2b52a98f6d1.jpg", "333", "tttt"));
 
-//		mImageCycleView.setOnPageClickListener(new ImageCycleView.OnPageClickListener() {
-//			@Override
-//			public void onClick(View imageView, ImageCycleView.ImageInfo imageInfo) {
-//				Toast.makeText(MainActivity.this, "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
-//			}
-//		});
+        mMouldImageCycleView.setOnPageClickListener(new Mould_ImageCycleView.OnPageClickListener() {
+			@Override
+			public void onClick(View imageView, Mould_ImageCycleView.ImageInfo imageInfo) {
+				Toast.makeText(getActivity(), "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
+			}
+		});
 
         mMouldImageCycleView.loadData(list, new Mould_ImageCycleView.LoadImageCallBack() {
             @Override
@@ -100,13 +109,68 @@ public class MouldFragment extends Fragment {
 //				ImageView imageView = new ImageView(MainActivity.this);
 //				bitmapUtils.display(imageView, imageInfo.image.toString());
 //				return imageView;
-
-
             }
         });
 
 
+        search = (SearchBox) view.findViewById(R.id.searchbox);
+        search.enableVoiceRecognition(this);
+        for(int x = 0; x < 10; x++){
+            SearchResult option = new SearchResult("Result " + Integer.toString(x), getResources().getDrawable(R.drawable.ic_history));
+            search.addSearchable(option);
+        }
+        search.setMenuListener(new SearchBox.MenuListener(){
+
+            @Override
+            public void onMenuClick() {
+                //Hamburger has been clicked
+                Toast.makeText(getActivity(), "Menu click", Toast.LENGTH_LONG).show();
+            }
+
+        });
+        search.setSearchListener(new SearchBox.SearchListener(){
+
+            @Override
+            public void onSearchOpened() {
+                //Use this to tint the screen
+            }
+
+            @Override
+            public void onSearchClosed() {
+                //Use this to un-tint the screen
+            }
+
+            @Override
+            public void onSearchTermChanged() {
+                //React to the search term changing
+                //Called after it has updated results
+            }
+
+            @Override
+            public void onSearch(String searchTerm) {
+                Toast.makeText(getActivity(), searchTerm +" Searched", Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onSearchCleared() {
+                //Called when the clear button is clicked
+
+            }
+
+        });
+
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1234 && resultCode == RESULT_OK) {
+            ArrayList<String> matches = data
+                    .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            search.populateEditText(matches);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 }
