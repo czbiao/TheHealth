@@ -66,7 +66,7 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
+
         final View view = inflater.inflate(R.layout.health_avtivity, container, false);
 
         //mSearchView = (SearchView) view.findViewById(R.id.searchView);
@@ -187,10 +187,4 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
-    public void reveal(View v){
-        startActivity(new Intent(getActivity(), RevealActivity.class));
-    }
-
-
 }
