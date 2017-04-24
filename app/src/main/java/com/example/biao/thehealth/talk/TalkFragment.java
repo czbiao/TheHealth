@@ -14,11 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.biao.thehealth.R;
-import com.example.biao.thehealth.talk.ImageCycleView;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -26,12 +27,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 为了顺便演示ViewPager的机制，
- * 特意写成了四个Fragment！在onCreateView中打印创建Log！
- */
-public class TalkFragment extends Fragment {
 
+public class TalkFragment extends Fragment implements View.OnClickListener {
+
+    private Button talk_bar_btn1,talk_bar_btn2,talk_bar_btn3,talk_bar_btn4;
+    private View view;
     private ImageView mImageView;
     private Bitmap mBitmap;
     private Handler handler = new Handler() {
@@ -44,6 +44,9 @@ public class TalkFragment extends Fragment {
     private String path="http://139.199.171.66:8080/server/222.jpg";
     private ImageCycleView mImageCycleView;
 
+
+
+
     public TalkFragment() {
         // Required empty public constructor
     }
@@ -53,7 +56,10 @@ public class TalkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.talk_activity, container, false);
+        view = inflater.inflate(R.layout.talk_activity, container, false);
+        initBannerBtn();
+
+
         mImageView = (ImageView) view.findViewById(R.id.imageView);
         TextView txt_content = (TextView) view.findViewById(R.id.txt_topbar);
 
@@ -80,9 +86,9 @@ public class TalkFragment extends Fragment {
         List<ImageCycleView.ImageInfo> list=new ArrayList<ImageCycleView.ImageInfo>();
 
         //res图片资源
-        list.add(new ImageCycleView.ImageInfo(R.drawable.aa1,"111111111111",""));
-        list.add(new ImageCycleView.ImageInfo(R.drawable.aa2,"222222222222",""));
-        list.add(new ImageCycleView.ImageInfo(R.drawable.aa3,"333333333333",""));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.aa1,"111111111111","第一张"));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.aa2,"222222222222","第二张"));
+        list.add(new ImageCycleView.ImageInfo(R.drawable.aa3,"333333333333","第三张"));
 
         //SD卡图片资源
 //		list.add(new ImageCycleView.ImageInfo(new File(Environment.getExternalStorageDirectory(),"a1.jpg"),"11111",""));
@@ -95,12 +101,12 @@ public class TalkFragment extends Fragment {
 //		list.add(new ImageCycleView.ImageInfo("http://img.lakalaec.com/ad/cb56a1a6-6c33-41e4-9c3c-363f4ec6b728.jpg","222","rrrr"));
 //		list.add(new ImageCycleView.ImageInfo("http://img.lakalaec.com/ad/e4229e25-3906-4049-9fe8-e2b52a98f6d1.jpg", "333", "tttt"));
 
-//		mImageCycleView.setOnPageClickListener(new ImageCycleView.OnPageClickListener() {
-//			@Override
-//			public void onClick(View imageView, ImageCycleView.ImageInfo imageInfo) {
-//				Toast.makeText(MainActivity.this, "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
-//			}
-//		});
+		mImageCycleView.setOnPageClickListener(new ImageCycleView.OnPageClickListener() {
+			@Override
+			public void onClick(View imageView, ImageCycleView.ImageInfo imageInfo) {
+				Toast.makeText(getActivity(), "你点击了" + imageInfo.value.toString(), Toast.LENGTH_SHORT).show();
+			}
+		});
 
         mImageCycleView.loadData(list, new ImageCycleView.LoadImageCallBack() {
             @Override
@@ -135,8 +141,6 @@ public class TalkFragment extends Fragment {
 
         return view;
     }
-
-
 
     //工作线程
     private class WorkThread extends Thread {
@@ -181,5 +185,35 @@ public class TalkFragment extends Fragment {
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+
+    public void initBannerBtn(){
+        talk_bar_btn1 = (Button) view.findViewById(R.id.talk_bar_btn1);
+        talk_bar_btn2 = (Button) view.findViewById(R.id.talk_bar_btn2);
+        talk_bar_btn3 = (Button) view.findViewById(R.id.talk_bar_btn3);
+        talk_bar_btn4 = (Button) view.findViewById(R.id.talk_bar_btn4);
+        talk_bar_btn1.setOnClickListener(this);
+        talk_bar_btn2.setOnClickListener(this);
+        talk_bar_btn3.setOnClickListener(this);
+        talk_bar_btn4.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.talk_bar_btn1:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.talk_bar_btn2:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.talk_bar_btn3:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.talk_bar_btn4:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }

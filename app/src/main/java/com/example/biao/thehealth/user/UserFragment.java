@@ -18,7 +18,9 @@ import com.example.biao.thehealth.R;
  * 为了顺便演示ViewPager的机制，
  * 特意写成了四个Fragment！在onCreateView中打印创建Log！
  */
-public class UserFragment extends Fragment {
+public class UserFragment extends Fragment implements View.OnClickListener {
+    private Button user_btn_1,user_btn_2,user_btn_3,user_btn_4,user_btn_5;
+    private View view;
 
 
     public UserFragment() {
@@ -30,7 +32,7 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.my_activity, container, false);
+        view = inflater.inflate(R.layout.user_activity, container, false);
         Button loginbtn = (Button)view.findViewById(R.id.login);
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,8 +41,44 @@ public class UserFragment extends Fragment {
             }
         });
 
+        initMyBtn();
+
 
         return view;
     }
 
+    private void initMyBtn() {
+        user_btn_1 = (Button) view.findViewById(R.id.user_btn_1);
+        user_btn_2 = (Button) view.findViewById(R.id.user_btn_2);
+        user_btn_3 = (Button) view.findViewById(R.id.user_btn_3);
+        user_btn_4 = (Button) view.findViewById(R.id.user_btn_4);
+        user_btn_5 = (Button) view.findViewById(R.id.user_btn_5);
+        user_btn_1.setOnClickListener(this);
+        user_btn_2.setOnClickListener(this);
+        user_btn_3.setOnClickListener(this);
+        user_btn_4.setOnClickListener(this);
+        user_btn_5.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.user_btn_1:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.user_btn_2:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.user_btn_3:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.user_btn_4:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.user_btn_5:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 }

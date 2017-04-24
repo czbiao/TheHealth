@@ -54,7 +54,7 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
         mRadioGroup.setOnCheckedChangeListener(this);
         FragmentManager fm = getChildFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        BlankFragment mFragment = new BlankFragment();
+        TalkFragment mFragment = new TalkFragment();
         ft.replace(R.id.frag, mFragment).commit();
 
         search = (SearchBox) view.findViewById(R.id.searchbox);
@@ -134,14 +134,14 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
             FragmentManager fm=getChildFragmentManager();
             FragmentTransaction ft=fm.beginTransaction();
             BlankFragment mFragment = new BlankFragment();
+            TalkFragment mTalkFragment = new TalkFragment();
 
         switch (checkedId) {
             case R.id.health_btn1:
-                ft.replace(R.id.frag,mFragment).commit();
+                ft.replace(R.id.frag,mTalkFragment).commit();
                 break;
             case R.id.health_btn2:
-                TalkFragment mTalkFragment = new TalkFragment();
-                ft.replace(R.id.frag,mTalkFragment).commit();
+                ft.replace(R.id.frag,mFragment).commit();
                 break;
             case R.id.health_btn3:
                 ft.replace(R.id.frag,mFragment).commit();
