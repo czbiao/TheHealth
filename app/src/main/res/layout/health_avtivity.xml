@@ -6,20 +6,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--<SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:background="@drawable/search_bg"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:queryHint="请输入搜索内容"
-        android:layout_weight="0.001"
-        android:paddingBottom="-8dp"
-        android:paddingTop="-8dp"
-        android:layout_marginTop="5dp"/>-->
-
     <com.quinny898.library.persistentsearch.SearchBox
         android:layout_width="wrap_content"
         android:id="@+id/searchbox"
@@ -39,6 +25,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
             <Button
+                android:id="@+id/health_bar_btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,6 +33,7 @@
                 android:text="水果"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,6 +41,7 @@
                 android:text="蔬菜"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -60,6 +49,7 @@
                 android:text="食谱"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -73,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp">
             <Button
+                android:id="@+id/health_bar_btn5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -80,6 +71,7 @@
                 android:text="五谷"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -87,6 +79,7 @@
                 android:text="肉类"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -94,6 +87,7 @@
                 android:text="奶制品"
                 android:background="@null"/>
             <Button
+                android:id="@+id/health_bar_btn8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -102,7 +96,6 @@
                 android:background="@null"/>
 
         </LinearLayout>
-
     </LinearLayout>
 
     <RadioGroup

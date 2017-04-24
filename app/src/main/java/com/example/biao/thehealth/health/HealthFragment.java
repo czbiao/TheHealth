@@ -13,9 +13,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.biao.thehealth.R;
@@ -31,58 +30,25 @@ import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
 
-/**
- * 为了顺便演示ViewPager的机制，
- * 特意写成了四个Fragment！在onCreateView中打印创建Log！
- */
-public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChangeListener{
-    private String[] mStrs = {"aaa", "bbb", "ccc", "airsaid"};
-    private SearchView mSearchView;
-    private ListView mListView;
 
+public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
     private RadioGroup mRadioGroup;
     Boolean isSearch;
     private SearchBox search;
-
-
+    private View view;
+    private Button health_bar_btn1,health_bar_btn2,health_bar_btn3,health_bar_btn4,health_bar_btn5,health_bar_btn6,health_bar_btn7,health_bar_btn8;
 
     public HealthFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.health_avtivity, container, false);
+        view = inflater.inflate(R.layout.health_avtivity, container, false);
 
-        //mSearchView = (SearchView) view.findViewById(R.id.searchView);
-        //mSearchView.setSubmitButtonEnabled(true);
-        //mListView = (ListView) view.findViewById(R.id.listView);
-        //mListView.setAdapter(new ArrayAdapter<String>(container.getContext(), android.R.layout.simple_list_item_1, mStrs));
-        //mListView.setTextFilterEnabled(true);
-
-        /*// 设置搜索文本监听
-        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            // 当点击搜索按钮时触发该方法
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(container.getContext(), "您的选择是:" + query, Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            // 当搜索内容改变时触发该方法
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                if (!TextUtils.isEmpty(newText)){
-                    mListView.setFilterText(newText);
-                }else{
-                    mListView.clearTextFilter();
-                }
-                return false;
-            }
-        });*/
+        initBannerBtn();
 
         mRadioGroup = (RadioGroup) view.findViewById(R.id.health_rg_btn);
         mRadioGroup.setOnCheckedChangeListener(this);
@@ -94,7 +60,7 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
         search = (SearchBox) view.findViewById(R.id.searchbox);
         search.enableVoiceRecognition(this);
         for(int x = 0; x < 10; x++){
-            SearchResult option = new SearchResult("Result " + Integer.toString(x), getResources().getDrawable(R.drawable.ic_history));
+            SearchResult option = new SearchResult("result" + Integer.toString(x), getResources().getDrawable(R.drawable.ic_history));
             search.addSearchable(option);
         }
         search.setMenuListener(new MenuListener(){
@@ -102,7 +68,7 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
             @Override
             public void onMenuClick() {
                 //Hamburger has been clicked
-                Toast.makeText(getActivity(), "Menu click", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Menu click", Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -111,34 +77,56 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
             @Override
             public void onSearchOpened() {
                 //Use this to tint the screen
+                Toast.makeText(getActivity(), " onSearchOpened", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onSearchClosed() {
                 //Use this to un-tint the screen
+                Toast.makeText(getActivity(), " onSearchClosed", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onSearchTermChanged() {
                 //React to the search term changing
                 //Called after it has updated results
+                //搜索数据改变时候提示
             }
 
             @Override
             public void onSearch(String searchTerm) {
-                Toast.makeText(getActivity(), searchTerm +" Searched", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), searchTerm +" Searched", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onSearchCleared() {
                 //Called when the clear button is clicked
-
+                Toast.makeText(getActivity(), " onSearchCleared", Toast.LENGTH_SHORT).show();
             }
 
         });
 
         return view;
+    }
+
+    public void initBannerBtn(){
+        health_bar_btn1 = (Button) view.findViewById(R.id.health_bar_btn1);
+        health_bar_btn2 = (Button) view.findViewById(R.id.health_bar_btn2);
+        health_bar_btn3 = (Button) view.findViewById(R.id.health_bar_btn3);
+        health_bar_btn4 = (Button) view.findViewById(R.id.health_bar_btn4);
+        health_bar_btn5 = (Button) view.findViewById(R.id.health_bar_btn5);
+        health_bar_btn6 = (Button) view.findViewById(R.id.health_bar_btn6);
+        health_bar_btn7 = (Button) view.findViewById(R.id.health_bar_btn7);
+        health_bar_btn8 = (Button) view.findViewById(R.id.health_bar_btn8);
+        health_bar_btn1.setOnClickListener(this);
+        health_bar_btn2.setOnClickListener(this);
+        health_bar_btn3.setOnClickListener(this);
+        health_bar_btn4.setOnClickListener(this);
+        health_bar_btn5.setOnClickListener(this);
+        health_bar_btn6.setOnClickListener(this);
+        health_bar_btn7.setOnClickListener(this);
+        health_bar_btn8.setOnClickListener(this);
     }
 
     @Override
@@ -174,5 +162,36 @@ public class HealthFragment extends Fragment implements RadioGroup.OnCheckedChan
             search.populateEditText(matches);
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.health_bar_btn1:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn2:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn3:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn4:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn5:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn6:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn7:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.health_bar_btn8:
+                Toast.makeText(getActivity(), "该功能正在开发中...", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
     }
 }
