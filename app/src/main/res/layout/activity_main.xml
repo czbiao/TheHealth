@@ -8,15 +8,19 @@
     tools:context="com.example.biao.thehealth.MainActivity">
 
     <TextView
-        android:id="@+id/txt_topbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sdasd"/>
-
-    <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="别看我，看下面的重要提示"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
         android:text="该功能正在开发中..."
         android:textSize="18sp"
         android:layout_centerVertical="true"
