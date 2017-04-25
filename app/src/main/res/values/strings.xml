@@ -10,4 +10,46 @@
     <string name="talk">咨询</string>
     <string name="mould">塑形</string>
     <string name="user">我</string>
+
+    <!-- 登录 -->
+    <string name="title_main">女性健康APP登录</string>
+    <string name="userName">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="instruction">使用说明</string>
+
+    <!-- 主界面 -->
+    <string name="welcome">欢迎使用！</string>
+
+    <!-- 注册 -->
+    <string name="repassword">重复密码</string>
+    <string name="register_title">注册</string>
+    <string name="spin_prompt">联系方式</string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="telephone">telephone</string>
+
+    <string-array name="communication_way">
+        <item>手机号</item>
+        <item>邮箱</item>
+        <item>QQ</item>
+        <item>微信</item>
+        <item>其他</item>
+    </string-array>
+
+    <!-- 注册须知 -->
+    <string name="titleOfInstrction">注册须知</string>
+    <string name="agreement">    怎么作为一个文件传入实现用户的登录功能：输入用户名和密码，点击【登录】按钮，将用户名和密码以 Json 格式封装后发送到服务器进行校验，校验通过则允许进入系统主界面，否则拒绝进入，并给出对应的错误提示信息。注：客户端需要对各种异常或非法的登录场景进行过滤处理，并给出对应的提示。3. 实现密码找回功能：当用户忘记密码时，输入用户名后，点击【忘记密码】，系统会将该用户的用户名和密码以明文方式发送到该用户注册时所登记的邮箱。注：系统邮箱为 admin@test.com，密码:admin，SMTP 服务器地址为：
+测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本</string>
+    <string name="agree">我同意</string>
+    <string name="disagree">我不同意</string>
+    <string name="next">下一步</string>
+    <string name="goback">返回</string>
+
+    <!-- 使用说明 -->
+    <string name="content">	    1、用户必须提供真实的个人信息\n
+	    </string>
+    <string name="exit">退出</string>
 </resources>
