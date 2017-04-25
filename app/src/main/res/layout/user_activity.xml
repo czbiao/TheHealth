@@ -7,40 +7,59 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp">
+        android:layout_height="45dp"
+        android:background="@android:color/holo_blue_light">
 
-        <Button
+        <!--<Button
             android:id="@+id/user_sun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:background="@drawable/shape"
-            android:text="阳光值"/>
+            android:text="阳光值"/>-->
+        <TextView
+            android:id="@+id/user_sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="阳光值"
+            android:textColor="@android:color/background_light"
+            android:layout_marginLeft="10dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="知己"
             android:layout_centerInParent="true"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/black"/>
+            android:layout_centerVertical="true"
+            android:text="知己"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"/>
 
-        <Button
+        <TextView
+            android:id="@+id/user_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="签到"
+            android:textColor="@android:color/background_light"/>
+
+        <!--<Button
             android:id="@+id/user_sign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:background="@drawable/shape"
-            android:text="签到"/>
+            android:text="签到"/>-->
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
 
         <ImageView
             android:id="@+id/login"
