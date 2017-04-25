@@ -7,6 +7,7 @@ package com.example.biao.thehealth;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -18,7 +19,6 @@ public class BottomNvgViewPageAct extends AppCompatActivity implements RadioGrou
 
 
     //UI Objects
-    private TextView txt_topbar;
     private RadioGroup rg_tab_bar;
     private RadioButton rb_channel;
     private RadioButton rb_message;
@@ -42,6 +42,9 @@ public class BottomNvgViewPageAct extends AppCompatActivity implements RadioGrou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_nvg_view_page);
+        //透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         bindViews();
@@ -50,7 +53,6 @@ public class BottomNvgViewPageAct extends AppCompatActivity implements RadioGrou
 
 
     private void bindViews() {
-        txt_topbar = (TextView) findViewById(R.id.txt_topbar);
         rg_tab_bar = (RadioGroup) findViewById(R.id.rg_tab_bar);
         rb_channel = (RadioButton) findViewById(R.id.rb_commun);
         rb_message = (RadioButton) findViewById(R.id.rb_nutri);

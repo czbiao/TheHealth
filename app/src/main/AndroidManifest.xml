@@ -57,7 +57,7 @@
         </activity>
         <activity android:name=".user.activity.Agreement">
         </activity>
-        <activity android:name=".user.activity.user_manager">
+        <activity android:name=".user.activity.User_manager">
         </activity>
     </application>
 

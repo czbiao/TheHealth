@@ -3,6 +3,7 @@ package com.example.biao.thehealth.user.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.biao.thehealth.R;
@@ -14,6 +15,7 @@ public class User_manager extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_usermanager);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         initBtn();
 

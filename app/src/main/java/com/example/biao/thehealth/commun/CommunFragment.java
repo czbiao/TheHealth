@@ -35,6 +35,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.biao.thehealth.R;
+import com.example.biao.thehealth.SystemBarTintManager;
 import com.example.biao.thehealth.commun.circledemo.activity.*;
 import com.example.biao.thehealth.commun.circledemo.activity.MainActivity;
 import com.example.biao.thehealth.commun.circledemo.adapter.CircleAdapter;
@@ -86,7 +87,6 @@ public class CommunFragment extends Fragment implements CircleContract.View, Eas
     private SwipeRefreshLayout.OnRefreshListener refreshListener;
 
 
-
     public CommunFragment() {
         // Required empty public constructor
     }
@@ -97,12 +97,7 @@ public class CommunFragment extends Fragment implements CircleContract.View, Eas
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view_i = inflater.inflate(R.layout.commun_activity, container, false);
-        /*if (isApplyKitKatTranslucency()) {
-            setTranslucentStatus(true);
-        }
-        if (isApplyColorPrimary()) {
-            setSystemBarTintDrawable(getResources().getDrawable(R.color.basic_color_primary));
-        }*/
+
 
         presenter = new CirclePresenter(this);
         initView();
@@ -562,40 +557,6 @@ public class CommunFragment extends Fragment implements CircleContract.View, Eas
     }
 
 
-    protected boolean isApplyKitKatTranslucency() {
-        return true;
-    }
-
-    protected boolean isApplyColorPrimary() {
-        return true;
-    }
-
-    private void setSystemBarTintDrawable(Drawable tintDrawable) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            SystemBarUtil mTintManager = new SystemBarUtil(getActivity());
-            if (tintDrawable != null) {
-                mTintManager.setStatusBarTintEnabled(true);
-                mTintManager.setTintDrawable(tintDrawable);
-            } else {
-                mTintManager.setStatusBarTintEnabled(false);
-                mTintManager.setTintDrawable(null);
-            }
-        }
-    }
-
-    protected void setTranslucentStatus(boolean on) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window win = getActivity().getWindow();
-            WindowManager.LayoutParams winParams = win.getAttributes();
-            final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-            if (on) {
-                winParams.flags |= bits;
-            } else {
-                winParams.flags &= ~bits;
-            }
-            win.setAttributes(winParams);
-        }
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -604,4 +565,5 @@ public class CommunFragment extends Fragment implements CircleContract.View, Eas
         // Forward results to EasyPermissions
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
     }
+
 }
