@@ -20,6 +20,7 @@ import com.example.biao.thehealth.MainActivity;
 import com.example.biao.thehealth.R;
 import com.example.biao.thehealth.user.activity.Login;
 import com.example.biao.thehealth.user.activity.User_manager;
+import com.example.biao.thehealth.user.signcalendar.SignCalendarActivity;
 
 
 public class UserFragment extends Fragment implements View.OnClickListener {
@@ -120,7 +121,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.user_sign:
-                intent = new Intent(getActivity(), MainActivity.class);
+                intent = new Intent(getActivity(), SignCalendarActivity.class);
                 startActivity(intent);
                 break;
             case R.id.user_sun:
