@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/colorAccent"
+        android:background="@color/blue"
         android:fitsSystemWindows="true" />
 
     <com.quinny898.library.persistentsearch.SearchBox
@@ -15,162 +15,174 @@
         android:id="@+id/searchbox"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/radio_bg"
-        android:orientation="vertical"
-        android:layout_marginBottom="5dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-            <Button
-                android:id="@+id/health_bar_btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_1"
-                android:text="水果"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_2"
-                android:text="蔬菜"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_3"
-                android:text="食谱"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_4"
-                android:text="红糖姜茶"
-                android:background="@null"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
-            <Button
-                android:id="@+id/health_bar_btn5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_5"
-                android:text="五谷"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_6"
-                android:text="肉类"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_7"
-                android:text="奶制品"
-                android:background="@null"/>
-            <Button
-                android:id="@+id/health_bar_btn8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/health_8"
-                android:text="广告位"
-                android:background="@null"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <RadioGroup
-        android:id="@+id/health_rg_btn"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/radio_bg"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/health_btn1"
-            style="@style/menu_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="热门视频"
-            android:textColor="@drawable/menu_text_color"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/health_btn2"
-            style="@style/menu_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="热门文章"
-            android:textColor="@drawable/menu_text_color"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/health_btn3"
-            style="@style/menu_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="推荐视频"
-            android:textColor="@drawable/menu_text_color"
-            android:textStyle="normal"/>
-
-        <RadioButton
-            android:id="@+id/health_btn4"
-            style="@style/menu_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="推荐文章"
-            android:textColor="@drawable/menu_text_color"
-            android:textStyle="normal"/>
-    </RadioGroup>
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"/>
 
 
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radio_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/health_bar_btn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_1"
+                        android:text="水果"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_2"
+                        android:text="蔬菜"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_3"
+                        android:text="食谱"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_4"
+                        android:text="红糖姜茶"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <Button
+                        android:id="@+id/health_bar_btn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_5"
+                        android:text="五谷"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_6"
+                        android:text="肉类"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_7"
+                        android:text="奶制品"/>
+
+                    <Button
+                        android:id="@+id/health_bar_btn8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableTop="@drawable/health_8"
+                        android:text="广告位"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/health_rg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/radio_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/health_btn1"
+                    style="@style/menu_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="热门视频"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textStyle="normal"/>
+
+                <RadioButton
+                    android:id="@+id/health_btn2"
+                    style="@style/menu_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="热门文章"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textStyle="normal"/>
+
+                <RadioButton
+                    android:id="@+id/health_btn3"
+                    style="@style/menu_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="推荐视频"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textStyle="normal"/>
+
+                <RadioButton
+                    android:id="@+id/health_btn4"
+                    style="@style/menu_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="推荐文章"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textStyle="normal"/>
+            </RadioGroup>
+
             <FrameLayout
                 android:id="@+id/frag"
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
+                android:layout_height="match_parent"
                 android:layout_weight="0.32">
             </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
-
-        </ScrollView>
-
-    <!--<ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />-->
 
 </LinearLayout>

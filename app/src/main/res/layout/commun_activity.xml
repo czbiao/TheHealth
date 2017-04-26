@@ -7,15 +7,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/colorAccent"
+        android:background="@color/blue"
         android:fitsSystemWindows="true" />
 
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="43dp"
-        android:background="@drawable/menu_bg_radiobutton">
-
+        android:background="@color/blue">
 
         <Button
             android:id="@+id/commun_top_text"
@@ -25,21 +24,23 @@
             android:layout_centerVertical="true"
             android:drawableRight="@drawable/mail"
             android:background="@null"
-            android:text="我觉得我很美"/>
+            android:text="我觉得我很美"
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="@drawable/plus"
-            android:layout_marginTop="4dp"
+            android:background="@null"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="35sp"
             android:layout_marginRight="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_alignParentRight="true"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
-<RelativeLayout
+    <RelativeLayout
         android:id="@+id/bodyLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -73,6 +74,5 @@
             app:cpb_progressbar_width="3dp" />
 
     </RelativeLayout>
-	
-	
+
 </LinearLayout>

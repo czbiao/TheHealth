@@ -1,103 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+
+<ScrollView    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
 
 
-    <com.example.biao.thehealth.talk.ImageCycleView
-        android:id="@+id/icv_topView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-    </com.example.biao.thehealth.talk.ImageCycleView>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp">
-        <Button
-            android:id="@+id/talk_bar_btn1"
+        <com.example.biao.thehealth.talk.ImageCycleView
+            android:id="@+id/icv_topView"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:drawableLeft="@drawable/talk_1"
-            android:text="营养咨询"
-            android:layout_marginRight="5dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="20dp"/>
-        <Button
-            android:id="@+id/talk_bar_btn2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:drawableLeft="@drawable/talk_2"
-            android:text="妇科咨询"
-            android:layout_marginLeft="5dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="20dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <Button
-            android:id="@+id/talk_bar_btn3"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:drawableLeft="@drawable/talk_3"
-            android:text="我的咨询"
-            android:layout_marginRight="5dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="20dp"/>
+            android:layout_height="200dp">
 
-        <Button
-            android:id="@+id/talk_bar_btn4"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:drawableLeft="@drawable/talk_4"
-            android:text="热点问题"
-            android:layout_marginLeft="5dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="20dp"/>
-    </LinearLayout>
+        </com.example.biao.thehealth.talk.ImageCycleView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp">
+            <Button
+                android:id="@+id/talk_bar_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/talk_1"
+                android:text="营养咨询"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="20dp"/>
+            <Button
+                android:id="@+id/talk_bar_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/talk_2"
+                android:text="妇科咨询"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/talk_bar_btn3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/talk_3"
+                android:text="我的咨询"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="20dp"/>
+
+            <Button
+                android:id="@+id/talk_bar_btn4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/talk_4"
+                android:text="热点问题"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日热点"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
         <TextView
+            android:id="@+id/txt_topbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="今日热点"/>
+            android:text="网络图片进行测试"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="更多"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
 
-    <TextView
-        android:id="@+id/txt_topbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="网络图片进行测试"/>
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-
-        android:background="@drawable/aa1"
-        android:id="@+id/imageView"/>
-</LinearLayout>
+            android:background="@drawable/aa1"
+            android:id="@+id/imageView"/>
+    </LinearLayout>
+</ScrollView>

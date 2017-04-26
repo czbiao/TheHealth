@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.biao.thehealth"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
