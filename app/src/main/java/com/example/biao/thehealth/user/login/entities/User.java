@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.user.entities;
+package com.example.biao.thehealth.user.login.entities;
 
 /**
  * Created by Biao on 2017/4/25.
@@ -6,9 +6,7 @@ package com.example.biao.thehealth.user.entities;
 
 /**
  * User
- * @author renzhongfeng
  * 用户封装类，用户的属性包括用户名、密码、性别、联系方式等
- * 2014/07/27
  */
 public class User {
     /**
@@ -22,6 +20,8 @@ public class User {
     private String sex = null;
     private String communication = null;
     private String myCommunication_content = null;
+    private String communication_way = null;
+    private String communication_num = null;
 
     public String getMyCommunication_content() {
         return myCommunication_content;
@@ -53,5 +53,16 @@ public class User {
     public void setCommunication(String communication) {
         this.communication = communication;
     }
-
+    public String getCommunication_way() {
+        return communication_way;
+    }
+    public void setCommunication_way(String communicationWay) {
+        communication_way = communicationWay;
+    }
+    public String getCommunication_num() {
+        return communication_num;
+    }
+    public void setCommunication_num(String communicationNum) {
+        communication_num = communicationNum;
+    }
 }

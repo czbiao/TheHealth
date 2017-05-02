@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.user.activity;
+package com.example.biao.thehealth.user.login.activity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,14 +14,12 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import com.example.biao.thehealth.user.global.GlobalConstants;
+import com.example.biao.thehealth.user.login.global.GlobalConstants;
 
 import com.example.biao.thehealth.R;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -36,8 +34,7 @@ import android.widget.Toast;
 
 /**
  * Login
- *
- * @author 任忠锋 用户在打开该App时看到的界面，包括用户的登陆，链接注册，使用说明等界面 2014.07.25
+ *用户在打开该App时看到的界面，包括用户的登陆，链接注册，使用说明等界面
  */
 
 public class Login extends Activity {
@@ -71,7 +68,7 @@ public class Login extends Activity {
                 //startActivity(login_main);
                 finish();
             } else {
-                Toast.makeText(Login.this, "登陆失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Login.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -84,8 +81,6 @@ public class Login extends Activity {
         init();
         initListener();
     }
-
-
 
 
 
@@ -124,8 +119,6 @@ public class Login extends Activity {
 
         @Override
         public void onClick(View v) {
-
-
 
             new Thread() {
                 public void run() {

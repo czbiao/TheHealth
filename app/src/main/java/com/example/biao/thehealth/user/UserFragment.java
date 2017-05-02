@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import com.example.biao.thehealth.MainActivity;
 import com.example.biao.thehealth.R;
-import com.example.biao.thehealth.user.activity.Login;
-import com.example.biao.thehealth.user.activity.User_manager;
+import com.example.biao.thehealth.user.login.activity.Login;
+import com.example.biao.thehealth.user.login.activity.User_manager;
 import com.example.biao.thehealth.user.signcalendar.SignCalendarActivity;
 
 
@@ -27,7 +27,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
     private Button user_btn_1, user_btn_2, user_btn_3, user_btn_4, user_btn_5;
     private View view;
     private ImageView loginbtn;
-    private TextView login_username;
+    public static TextView login_username;
     private Button user_friend, user_favor, user_history;
     private TextView user_sun, user_sign;
 

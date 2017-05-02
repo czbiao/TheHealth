@@ -13,6 +13,7 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class SignCalendarActivity extends Activity {
 
 	private String date = null;// 设置默认选中的日期  格式为 “2014-04-05” 标准DATE格式   
 	private TextView popupwindow_calendar_month;
+	private TextView calendar_back;
 	private SignCalendar calendar;
 	private Button btn_signIn;
 	private List<String> list = new ArrayList<String>(); //设置标记列表
@@ -32,13 +34,24 @@ public class SignCalendarActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.user_sign_calendar);
+		//透明状态栏
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
 
 		// 初始化DBManager
         dbManager = new DBManager(this);
         SimpleDateFormat    formatter    =   new    SimpleDateFormat    ("yyyy-MM-dd");       
 		Date    curDate    =   new    Date(System.currentTimeMillis());//获取当前时间       
-		date1 =formatter.format(curDate); 
-		
+		date1 =formatter.format(curDate);
+
+
+		calendar_back = (TextView) findViewById(R.id.calendar_back);
+		calendar_back.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		popupwindow_calendar_month = (TextView) findViewById(R.id.popupwindow_calendar_month);
 		btn_signIn = (Button) findViewById(R.id.btn_signIn);
 		calendar = (SignCalendar) findViewById(R.id.popupwindow_calendar);

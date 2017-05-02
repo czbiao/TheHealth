@@ -1,12 +1,9 @@
-package com.example.biao.thehealth.user.activity;
+package com.example.biao.thehealth.user.login.activity;
 
 
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.biao.thehealth.R;

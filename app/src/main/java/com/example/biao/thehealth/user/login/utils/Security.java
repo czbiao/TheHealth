@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.user.utils;
+package com.example.biao.thehealth.user.login.utils;
 
 /**
  * Created by Biao on 2017/4/25.

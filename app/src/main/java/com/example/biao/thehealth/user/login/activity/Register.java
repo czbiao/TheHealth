@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.user.activity;
+package com.example.biao.thehealth.user.login.activity;
 
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import com.example.biao.thehealth.user.entities.User;
+import com.example.biao.thehealth.user.login.entities.User;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -43,18 +43,15 @@ import com.example.biao.thehealth.R;
 
 
 
-
-
 /**
  * Register
- * @author renzhongfeng
  * 是注册界面对应的java类，实现用户注册功能 2014/07/27
  */
 public class Register extends Activity {
     /**
      * TELEPHONE 联系方式选择为手机号 EMAIL 联系方式选择为电子邮件，QQ 联系方式选择为QQ WECHAT 联系方式选择为微信
      * OTHERS 联系方式选择为其它，usernameCursor 判读用户名输入框是失去光标还是获得光标repasswordCursor
-     * 判读重复密码输入框是失去光标还是获得光标 mySex 接收用户输入的�?�?
+     * 判读重复密码输入框是失去光标还是获得光标 mySex 接收用户输入的内容
      */
     public final static int TELEPHONE = 0;
     public final static int EMAIL = 1;
@@ -131,7 +128,7 @@ public class Register extends Activity {
     }
 
     /**
-     * 监听事件的初始化 用户名输入框光标失去监听，密码重新输入框的光标失去监听，性别复选框监听，注册按钮点击监听，返回按钮点击监�?
+     * 监听事件的初始化 用户名输入框光标失去监听，密码重新输入框的光标失去监听，性别复选框监听，注册按钮点击监听，返回按钮点击监听
      */
     private void initListener() {
         this.userName.setOnFocusChangeListener(new CheckUsernameListener());
@@ -144,8 +141,7 @@ public class Register extends Activity {
 
     /**
      * CheckUsernameListener
-     * @author renzhongfeng
-     * 当输入完用户名，输入框失去光标后,�?��该用户名在数据库中是否存�?
+     * 当输入完用户名，输入框失去光标后,判断该用户名在数据库中是否存在
      */
     private class CheckUsernameListener implements OnFocusChangeListener {
         @Override
@@ -175,8 +171,7 @@ public class Register extends Activity {
 
     /**
      * RadioGroupSex
-     * @author renzhongfeng
-     * 性别复选框的监听类，并将获得的性别赋给成员变量mySex 2014/07/27
+     * 性别复选框的监听类，并将获得的性别赋给成员变量mySex
      */
     private class RadioGroupSex implements RadioGroup.OnCheckedChangeListener {
 
@@ -193,8 +188,7 @@ public class Register extends Activity {
 
     /**
      * RePasswordListener
-     * @author renzhongfeng
-     * 重复输入密码失去光标的监听类 2014/07/27
+     * 重复输入密码失去光标的监听类
      */
     private class RePasswordListener implements OnFocusChangeListener {
         @Override
@@ -232,8 +226,7 @@ public class Register extends Activity {
 
     /**
      * SpinnerListener
-     * @author renzhongfeng
-     * 联系方式的spinner组件commnunication监听，获得Item的内�?
+     * 联系方式的spinner组件commnunication监听，获得Item的内容
      */
     private class SpinnerListener implements OnItemSelectedListener {
 
@@ -307,9 +300,7 @@ public class Register extends Activity {
     }
     /**
      * RegisterListener
-     * @author renzhongfeng
-     * 点击注册按钮后，向服务器端发送注册信息，等到服务器返回确认信息后，提示注册成功，并自动返回登陆页�?
-     * 2014/07/28
+     * 点击注册按钮后，向服务器端发送注册信息，等到服务器返回确认信息后，提示注册成功，并自动返回登陆页
      */
     private class RegisterListener implements OnClickListener {
 
@@ -336,7 +327,7 @@ public class Register extends Activity {
         }
         /**
          * 获取用户的注册信息获取用户在页面上填写的信息，并将这些信息封装到User类中
-         * @return User 包含有用户完整注册信息的User包装�?
+         * @return User 包含有用户完整注册信息的User包装
          */
         private User getUser() {
             User user = new User();
@@ -351,8 +342,7 @@ public class Register extends Activity {
 
     /**
      * ExitListener
-     * @author renzhongfeng
-     * 设置“返回按钮的点击监听，点击后回到登陆界面2014/07/27
+     * 设置返回按钮的点击监听，点击后回到登陆界面
      */
     private class ExitListener implements OnClickListener {
 
@@ -367,7 +357,6 @@ public class Register extends Activity {
 
     /**
      * MakeSureListener
-     * @author renzhongfeng
      * 确定提示框的确定按钮监听
      */
     private class MakeSureListener implements

@@ -1,4 +1,4 @@
-package com.example.biao.thehealth.user.global;
+package com.example.biao.thehealth.user.login.global;
 
 /**
  * Created by Biao on 2017/4/25.

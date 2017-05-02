@@ -78,4 +78,6 @@ dependencies {
     compile 'com.quinny898.library.persistentsearch:library:1.0.0-SNAPSHOT'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile files('libs/json-lib-2.2.2-jdk15.jar')
+    compile files('libs/gson-2.3.jar')
 }
